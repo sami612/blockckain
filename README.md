@@ -2,12 +2,10 @@
 
 ## Configuration
 
-### Installation des dépendances
-
-Pour utiliser SHA-256, on utilise openssl.
+### Dependencies
 
 ```sh
-sudo apt install libssl-dev  # Debian ou Ubuntu
+sudo apt install libssl-dev  # Debian-based systems
 ```
 
 ### Compilation
@@ -18,18 +16,10 @@ cmake ..
 make -j$(nproc)
 ```
 
+Thr generated binary is stored in `./build/blockchain`
+
 ### Execution
 
 ```sh
-./bin/executable
+./build/blockchain
 ```
-
-## Descriptions de la structure des fichiers
-
-Le dossier [bin](./bin) contient les fichiers executables.
-
-Le dossier [obj](./obj) contient les fichiers compilés.
-
-Le dossier [src](./src) contient les fichiers .c et .h.
-
-[Makefile](./Makefile) est le fichier pour la création automatique.
